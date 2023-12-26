@@ -22,7 +22,7 @@
                     Console.WriteLine($"Ошибка: {e.Message}");
                 }
             }
-
+            //$-sin, @-sqrt
         }
     }
 }

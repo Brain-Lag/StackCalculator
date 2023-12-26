@@ -1,10 +1,5 @@
 ﻿using StackCalculator.Exceptions;
 using StackCalculator.Factories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StackCalculator
 {
@@ -18,7 +13,7 @@ namespace StackCalculator
             string postfixExpression = InfixToPostfixConverter.ConvertToPostfix(expression);
 
             string[] tokens = postfixExpression.Split(' ');
-            IOperationFactory factory = new OperationFactory();
+            OperationFactory factory = new OperationFactory();
 
             foreach (string token in tokens)
             {
@@ -27,9 +22,9 @@ namespace StackCalculator
                 {
                     operation.Execute(stack);
                 }
-                catch (Exception ex)
+                catch (Exception e)
                 {
-                    Console.WriteLine($"Ошибка выполнения операции: {ex.Message}");
+                    Console.WriteLine($"Ошибка выполнения операции: {e.Message}");
                 }
             }
             if (stack.Count == 1) return stack.Pop();

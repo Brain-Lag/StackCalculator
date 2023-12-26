@@ -49,7 +49,7 @@
   <Class Name="StackCalculator.Calculator">
     <Position X="0.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAIAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Calculator.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -73,7 +73,6 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Factories\OperationFactory.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.208" Collapsed="true" />
   </Class>
   <Class Name="StackCalculator.Operations.Number" BaseTypeListCollapsed="true">
     <Position X="9.5" Y="4" Width="1.5" />
@@ -83,13 +82,6 @@
     </TypeIdentifier>
     <Lollipop Position="0.1" Collapsed="true" />
   </Class>
-  <Interface Name="StackCalculator.IOperationFactory">
-    <Position X="3" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
-      <FileName>Factories\IOperationFactory.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="StackCalculator.IOperation">
     <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>

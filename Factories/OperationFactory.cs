@@ -1,13 +1,9 @@
-﻿using StackCalculator.Operations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using StackCalculator.Exceptions;
+using StackCalculator.Operations;
 
 namespace StackCalculator.Factories
 {
-    internal class OperationFactory : IOperationFactory
+    internal class OperationFactory
     {
         public IOperation CreateOperation(string token)
         {
@@ -27,8 +23,12 @@ namespace StackCalculator.Factories
                         return new Multiplication();
                     case "/":
                         return new Division();
+                    case "$":
+                        return new Sinus();
+                    case "@":
+                        return new SquareRoot();
                     default:
-                        throw new InvalidOperationException($"Неизвестная операция или некорректное число: {token}");
+                        throw new CalculatorException($"Неизвестная операция или некорректное число: {token}");
                 }
             }
         }

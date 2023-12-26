@@ -18,6 +18,9 @@ namespace StackCalculator
                 case '*':
                 case '/':
                     return 2;
+                case '@':
+                case '$':
+                    return 3;
                 default:
                     return 0;
             }
@@ -30,7 +33,7 @@ namespace StackCalculator
 
             foreach (char token in infixExpression) 
             {
-                if (char.IsDigit(token))
+                if (char.IsDigit(token) || char.IsLetter(token))
                 {
                     postfix.Append(token);
                     isPreviousTokenNumber = true;
