@@ -1,4 +1,5 @@
-﻿using StackCalculator.Factories;
+﻿using StackCalculator.Exceptions;
+using StackCalculator.Factories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,6 @@ namespace StackCalculator
     internal class Calculator
     {
         Stack<double> stack = new Stack<double>();
-        Dictionary<char, double> variables = new Dictionary<char, double>();
 
         public double Calculate(string expression)
         {
@@ -25,7 +25,7 @@ namespace StackCalculator
                 IOperation operation = factory.CreateOperation(token);
                 try
                 {
-                    operation.Execute(stack, variables);
+                    operation.Execute(stack);
                 }
                 catch (Exception ex)
                 {
@@ -33,7 +33,7 @@ namespace StackCalculator
                 }
             }
             if (stack.Count == 1) return stack.Pop();
-            else throw new InvalidOperationException("Некорректное выражение");
+            else throw new CalculatorException("Некорректное выражение");
         }
     }
 }

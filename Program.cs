@@ -17,9 +17,9 @@
                     result = calculator.Calculate(infixExpression);
                     Console.WriteLine($"Результат: {result}");
                 }
-                catch (Exception ex)
+                catch (Exception e)
                 {
-                    Console.WriteLine($"Ошибка: {ex.Message}");
+                    Console.WriteLine($"Ошибка: {e.Message}");
                 }
             }
 

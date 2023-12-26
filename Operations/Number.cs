@@ -15,7 +15,7 @@ namespace StackCalculator.Operations
             this._value = value;
         }
 
-        public void Execute(Stack<double> stack, Dictionary<char, double> variables)
+        public void Execute(Stack<double> stack)
         {
             stack.Push(_value);
         }

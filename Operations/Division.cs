@@ -9,7 +9,7 @@ namespace StackCalculator
 {
     internal class Division : IOperation
     {
-        public void Execute(Stack<double> stack, Dictionary<char, double> variables)
+        public void Execute(Stack<double> stack)
         {
             if (stack.Count < 2) throw new OperandsAmountException("Недостаточно операндов для деления");
             double operand2 = stack.Pop();
